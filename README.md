@@ -5,11 +5,11 @@ Main problem is not wanting the added complexity of using node.js which would en
 
 # Instructions:
 
-##1: Create a new maven project with Eclipse (make sure to check "skip archetype selection" box)
+## 1: Create a new maven project with Eclipse (make sure to check "skip archetype selection" box)
 
-##2:  Update pom.xml:
+## 2:  Update pom.xml:
 
-###A: Add spring-boot-starter-parent:
+### A: Add spring-boot-starter-parent:
 ```
 <parent>
     <groupId>org.springframework.boot</groupId>
@@ -18,7 +18,7 @@ Main problem is not wanting the added complexity of using node.js which would en
 </parent>
 ```
 
-###B: Add the following dependencies:
+### B: Add the following dependencies:
 ```
 <!-- Important, to enable Spring-Boot web project -->
 <dependency>
@@ -33,7 +33,7 @@ Main problem is not wanting the added complexity of using node.js which would en
 </dependency>
 ```
 
-###B: Add spring-boot-maven-plugin to the build section:
+### B: Add spring-boot-maven-plugin to the build section:
 ```
 <!-- This creates a proper Spring-Boot runnable jar -->
 <plugin>
@@ -42,10 +42,10 @@ Main problem is not wanting the added complexity of using node.js which would en
 </plugin>
 ```
 
-##3: Update Project
+## 3: Update Project
 * right click on the project, select Maven->Update Project for all pom.xml settings to take effect
 
-##4: Add other project files:
+## 4: Add other project files:
 
 The bare minimum files you will need to have:
 
@@ -65,12 +65,12 @@ The bare minimum files you will need to have:
 * run the project with the following command:
   * `mvn clean package spring-boot:run`
 
-##5: View result
+## 5: View result
 * go to the browser and enter the url `http://localhost:8080/index.html`
 * on a mostly-blank page, you will see the test text you wrote in index.html
 
 
-##Special note:
+## Special note:
 In case the program ceases to display because you are refreshing the browser, it may be because the hard reload has trigerred some security feature of the page's connection. You will need to import the js files you'll need to make the page work:
 
 ### Step 1: Create a folder for the react files needed.
